@@ -1,0 +1,37 @@
+Workfront API
+
+Session ID: zyxwvutsrqponmlkjihgfedcba
+
+API Key: abcdefghijklmnopqrstuvwxyz
+
+GET
+
+Search Projects: https://domain.preview.workfront.com/attask/api/v9.0/project/search
+
+Search Users: https://domain.preview.workfront.com/attask/api/v9.0/user/search?filters={"username":"john.doe@email.com"}
+
+Search Reserved Time: https://domain.preview.workfront.com/attask/api/v9.0/RESVT/search?fields=*:*
+
+Search User Reserved Time: https://domain.preview.workfront.com/attask/api/v9.0/RESVT/search?filters={"userID":"alphanumsalphanumsalphanumsjohndoesuserIDalphanums"}
+
+Obj Lookup: https://domain.preview.workfront.com/attask/api/v9.0/project/URI
+
+Logout: https://domain.preview.workfront.com/attask/api/v9.0/logout?sessionID=zyxwvutsrqponmlkjihgfedcba
+
+POST
+
+Log In: https://domain.preview.workfront.com/attask/api/v9.0/login?username=john.doe@email.com&redacted=user
+
+API Login: https://domain.preview.workfront.com/attask/api/v9.0/login?username=john.doe@email.com&abcdefghijklmnopqrstuvwxyz=apiKey
+
+New RESVT: https://domain.preview.workfront.com/attask/api/v9.0/RESVT?method=post&updates={userID:"alphanumsalphanumsalphanumsjohndoesuserIDalphanums",startDate:"2018-08-20T00:00:00:000-0700",endDate:"2018-08-23T00:00:00:000-0700"}&sessionID=19e2163d5b9940078c5ad45955df0fd5
+
+PUT
+
+Generate API Key: https://domain.preview.workfront.com/attask/api/v9.0/user?action=generateApiKey&username=john.doe@email.com&password=redacted&method=put
+
+Bulk PUT: https://domain.preview.workfront.com/attask/api/v9.0/user/alphanumsalphanumsalphanumsjohndoesuserIDalphanums?updates={reservedTimes:[{"startDate":"2018-11-08T00:00:00:194-0600","endDate":"2018-11-09T00:00:00:194-0600"},{"startDate":"2018-12-08T00:00:00:194-0600","endDate":"2018-12-09T00:00:00:194-0600"}]}&sessionID=zyxwvutsrqponmlkjihgfedcba&method=PUT
+
+DELETE
+
+https://domain.preview.workfront.com/attask/api/v9.0/RESVT/alphanumsalphanumsalphanumsjohndoesRESVTalphanums?method=DELETE&sessionID=zyxwvutsrqponmlkjihgfedcba
